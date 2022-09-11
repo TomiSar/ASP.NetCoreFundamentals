@@ -1,11 +1,20 @@
-﻿namespace OdeToFood.Core
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace OdeToFood.Core
 {
     public class Restaurant
     {
         public int Id { get; set; }
+
+        [Required, StringLength(80)]
         public string Name { get; set; }
-		public string Country { get; set; }
-		public string Location { get; set; }
+
+        [Required, StringLength(50)]
+        public string Country { get; set; }
+
+        [Required, StringLength(255)]
+        public string Location { get; set; }
+
         public CuisineType Cuisine { get; set; }
 		public string RatingStars { get; set; }
 	}

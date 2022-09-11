@@ -3,12 +3,13 @@
 @{
 }
 
+<img class="img-responsive" src="https://static.vecteezy.com/system/resources/thumbnails/000/274/987/small/10_cmVzdGF1cmFudF9sb2dvLTA3.jpg" width="200" height="200" />
 <h1>Restaurants</h1>
 
 <form method="get">
     <div class="form-group">
         <div class="input-group">
-            <input class="form-control" type="search" asp-for="SearchTerm" />
+            <input class="form-control" type="search" asp-for="SearchTerm" placeholder="Search restaurant..." />
             <span class="input-group-btn">
                 <button class="btn btn-default">
                     <i class="glyphicon glyphicon-search"></i>
@@ -26,16 +27,20 @@
         <td>@restaurant.Country</td>
         <td>@restaurant.Location</td>
         <td>@restaurant.Cuisine</td>
-        <td>@restaurant.RatingStars</td>
         <td>
-            <a class="btn btn-lg" asp-page="./Detail"
+            <a class="btn btn-lg" style="color:darkslateblue" asp-page="./Detail"
                asp-route-restaurantId="@restaurant.Id">
                 <i class="glyphicon glyphicon-zoom-in"></i>
+            </a>
+            <a class="btn btn-lg" style="color:navy" asp-page="./Edit"
+               asp-route-restaurantId="@restaurant.Id">
+                <i class="glyphicon glyphicon-edit"></i>
             </a>
         </td>
     </tr>
     }
 </table>
 
+<a class="btn btn-primary" asp-page=".\Edit" >Create New Restaurant</a>
 
 @*<div>@Model.Message</div>*@
