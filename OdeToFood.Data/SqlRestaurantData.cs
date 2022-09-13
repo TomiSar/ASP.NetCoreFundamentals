@@ -19,6 +19,11 @@ namespace OdeToFood.Data
 			return db.SaveChanges();
 		}
 
+		public int GetCountOfRestaurants()
+		{
+			return db.Restaurants.Count();
+		}
+
 		public Restaurant CreateNewRestaurant(Restaurant newRestaurant)
 		{
 			db.Add(newRestaurant);

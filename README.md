@@ -17,6 +17,6 @@
 * dotnet tool install --global dotnet-ef --version 2.1.4
 * dotnet ef dbcontext info -s ..\OdeToFood\OdeToFood.csproj
 
-## Add migrations and databsse
+## Add migrations and database
 * dotnet ef migrations add initialcreate -s ..\OdeToFood\OdeToFood.csproj
 * dotnet ef database update -s ..\OdeToFood\OdeToFood.csproj
