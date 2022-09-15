@@ -20,3 +20,11 @@
 ## Add migrations and database
 * dotnet ef migrations add initialcreate -s ..\OdeToFood\OdeToFood.csproj
 * dotnet ef database update -s ..\OdeToFood\OdeToFood.csproj
+
+## Building the API
+* https://datatables.net/
+* npm init (create package.json) 
+* npm install --save datatables.net-bs
+* npm install -D @types/node
+* npm install @types/jquery
+* npm install --save jquery @types/jquery
